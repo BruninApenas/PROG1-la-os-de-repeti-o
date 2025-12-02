@@ -58,3 +58,50 @@ cout<<"Soma "<<soma;
 return 0;
 }
 
+#include <iostream>
+using namespace std; 
+int main() {
+   float preco;
+   int dia = 0;
+   float total = 0;
+   char categoria;
+
+   cout<<"Digite o valor do preço";
+   cin>>preco;
+   cout<<"Digite dia e a categoria"<<endl;
+
+   while (dia)
+   {
+   cin>>dia;
+   if (dia == -1)
+   {
+    break;
+   }
+   cin>>categoria;
+   if (dia >= 1 && dia<=13)
+    {
+        if (categoria=='E')
+        {
+            total += preco *0.8;
+        }
+        else if (categoria=='A')
+        {
+            total += preco * 0.9;
+        }
+    }
+    else if (dia >=14 && dia <=31)
+    {
+        if (categoria =='E')
+        {
+            total += preco * 0.9;
+        }
+        else
+        {
+            total +=preco * 0.95;
+        }    
+    }
+   }
+   
+return 0;
+}
+
